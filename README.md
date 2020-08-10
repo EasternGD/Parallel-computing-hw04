@@ -66,9 +66,23 @@ Time: 6.1e-06, 1.75e-05, 8.06667e-06, 0.000220917, 4.135e-05, 2.57667e-05,
 Unit: sec
 <!-- Table -->
 <br />
-<p align="left">
-<img src="images/Result_Table.png" alt="Explain"> 
-</p>
+        <p align="left">
+                <img src="images/Result_Table.png" alt="Result_Table">       
+        </p>
 <br/>
 
 ## Discussion
+1. In order to improve the performance, in our code, all data are dynamically allocated in a one-dimensional array that used to simulate multi-dimensional arrays.
+2. If the data size is too small, the OpenMP version performance gets worse rather than better, so we set the limit to avoid this condition.(like if data size smaller than 3000, the program will not parallel computing.)
+3. because of the size limit condition setting, use 01.dat, and 02.dat to run the program of two versions will get the same execution time. 
+
+## Folder Structure
+* Data is saved into the `data` folder.
+* Header files is saved into the `inc` folder.
+* Code is saved into the `src` folder.
+
+## Contact
+
+Abbey, Chen - encoref9241@gmail.com
+
+Project Link: [Parallel-computing-hw03](https://github.com/EasternGD/Parallel-computing-hw03.git)
